@@ -62,7 +62,6 @@ For users, I will track the basics like username, email, and password, and the o
 
 ## Schedule:
 <!-- format better. also continue to work on -->
-Week:
 - Week 1:
     - Create web scrapers for at least two large miniature manufacturers to create CSVs with all initial data (will refer to python mini cap a lot)
 - Week 2:
