@@ -16,7 +16,7 @@ To do that I'll need to:
 - write code in Python to scrape sites for the mini data
 - save that data to a CSV
 - create an API to handle the data for each mini
-- make the CSV work for an API
+- make the CSV work with an API
 - create a template to create a page for each mini
 - create a page to seach or filter for specific tags in the API
 - create a results page that lists the filtered results and links to the mini's page
