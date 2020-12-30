@@ -1,0 +1,677 @@
+<html><head>
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-207780-1" type="text/javascript"></script>
+<script type="text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-207780-1');
+    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaper Miniatures :: figurefinder metal latest/06160</title>
+<link rel="shortcut icon" href="https://images.reapermini.com/static/web/favicon.ico" type="image/x-icon">
+<link href="/assets/web/css/fontawesome-all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/web/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	Vue.config.devtools = false
+	Vue.config.debug = false
+	Vue.config.silent = true
+</script>
+
+<meta name="google-site-verification" content="5J5GMiurjRB4fl22lPkqc_qLy326m697AlZ0GP5E0VM">
+<link rel="preload" as="script" href="https://unpkg.com/axios/dist/axios.min.js"><link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.js"><link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js"><link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"><link rel="preload" as="script" href="https://www.googletagmanager.com/gtag/js?id=UA-207780-1"></head>
+<body>
+<div id="header" class="header"><div class="top-bar"><div class="top-bar__left"><div class="top-bar__content-left"><ul class="top-bar__menu"><li class="currencyTitle">Currency:</li> <li><a href="/currency/usd?redirect=/miniatures/figurefinder+metal/latest/06160" class="currencySelected"><img src="https://images.reapermini.com/static/content/flags/USD.png" alt="USD"></a></li> <li><a href="/currency/eur?redirect=/miniatures/figurefinder+metal/latest/06160"><img src="https://images.reapermini.com/static/content/flags/EUR.png" alt="EUR"></a></li> <li><a href="/currency/gbp?redirect=/miniatures/figurefinder+metal/latest/06160"><img src="https://images.reapermini.com/static/content/flags/GBP.png" alt="GBP"></a></li> <li><a href="/currency/aud?redirect=/miniatures/figurefinder+metal/latest/06160"><img src="https://images.reapermini.com/static/content/flags/AUD.png" alt="AUD"></a></li></ul> <span class="currencyMessage">$ USD Ships from <span>USA</span></span></div></div> <div class="top-bar__center"><div class="top-bar__content-center"><div class="search-box"><div class="search-box__container"><form action="/search/" method="post"><input name="search_query" placeholder="Search..." class="search-box__input"> <button type="submit" class="search-box__button">Search</button></form></div></div></div></div> <div class="top-bar__right"><div class="top-bar__content-right"><ul class="top-bar__menu"><li><a href="https://facebook.com/reapermini"><i class="fab fa-facebook-f"></i></a></li> <li><a href="https://twitter.com/reapermini"><i class="fab fa-twitter"></i></a></li> <li><a href="/account/wishlist"><i aria-hidden="true" class="fa fa-heart"></i> <span class="is-hidden-touch">Wishlist</span></a></li> <li id="shoppingCartIcon"><a href="/checkout"><span class="fa-layers fa-fw"><i aria-hidden="true" class="fa fa-shopping-cart"></i> <span id="cartTotalQTY" class="fa-layers-counter">0</span> Item<span id="sneakys">s</span></span></a></li> <li><a href="/login"><i aria-hidden="true" class="fa fa-user"></i> <span class="is-hidden-touch">Sign In or Register</span></a></li></ul></div></div></div> <a href="/"><img alt="Reaper Mini" src="https://images.reapermini.com/static/content/reaperlogo.jpg" class="header__logo"></a> <div class="bottom-bar"><div class="search-box"><div class="search-box__container"><form action="/search/" method="post"><input name="search_query" placeholder="Search..." class="search-box__input"> <button type="submit" class="search-box__button">Search</button></form></div></div> <nav class="navbar"><ul class="bottom-bar__menu"><li><div class="dropdown"><button><div class="dropdown-title">Currency
+<i class="fas fa-angle-down"></i></div></button> <div id="dropdown-menu" role="menu" class="dropdown-menu"><div class="dropdown-content"><a href="/currency/usd?redirect=/miniatures/figurefinder+metal/latest/06160" class="dropdown-item currencySelected">
+USD
+</a> <a href="/currency/eur?redirect=/miniatures/figurefinder+metal/latest/06160" class="dropdown-item ">
+EUR
+</a> <a href="/currency/gbp?redirect=/miniatures/figurefinder+metal/latest/06160" class="dropdown-item ">
+GBP
+</a> <a href="/currency/aud?redirect=/miniatures/figurefinder+metal/latest/06160" class="dropdown-item ">
+AUD
+</a></div></div></div></li> <li><a href="/checkout"><i aria-hidden="true" class="fa fa-shopping-cart"></i> <span class="is-hidden-touch">Cart</span></a></li> <li><a href="/login"><i aria-hidden="true" class="fa fa-user"></i> <span class="is-hidden-touch">Sign In or Register</span></a></li> <li><i aria-hidden="true" class="fa fa-bars"></i></li></ul></nav></div> <div class="navbar-menu" style="justify-content: center;"><div class="navbar-item has-dropdown is-hoverable"><a href="/miniatures" class="navbar-link">
+Figures
+</a> <div id="figuresDropdown" data-style="width: 18rem;" class="navbar-dropdown"><div class="container is-fluid"><div class="columns"><div class="column"><a href="/miniatures/metal" class="navbar-item">
+Metal Figures
+ </a> <hr class="dropdown-divider"> <a href="/miniatures/dhl" class="navbar-item">
+Dark Heaven Legends
+</a> <a href="/miniatures/warlord" class="navbar-item">
+Warlord
+</a> <a href="/miniatures/chronoscope" class="navbar-item">
+Chronoscope
+</a> <a href="/miniatures/dungeondwellers" class="navbar-item">
+Dungeon Dwellers
+</a> <a href="/miniatures/pathfinder" class="navbar-item">
+Pathfinder
+</a> <a href="/miniatures/savageworlds+metal" class="navbar-item">
+Savage Worlds </a></div> <div class="column"><a href="/miniatures/plastic" class="navbar-item">
+Plastic Figures
+</a> <hr class="dropdown-divider"> <a href="/miniatures/bones" class="navbar-item">
+Bones Plastic Figures
+</a> <a href="/miniatures/bonesblack" class="navbar-item"><i>NEW!</i>&nbsp;&nbsp;Bones Black Plastic Figures
+</a> <a href="/miniatures/chronoscopebones" class="navbar-item">
+Chronoscope
+</a><a href="/miniatures/pathfinderbones" class="navbar-item">
+Pathfinder
+</a><a href="/miniatures/savageworlds+plastic" class="navbar-item">
+Savage Worlds </a> <a href="/miniatures/cav" class="navbar-item">
+CAV: Strike Ops </a></div> <div class="column"><a href="/previews" class="navbar-item">
+Previews
+</a> <hr class="dropdown-divider"></div></div></div></div></div> <div class="navbar-item has-dropdown is-hoverable"><a href="/paints" class="navbar-link">Paints</a> <div class="navbar-dropdown"><a href="/paints" class="navbar-item">MSP Home</a> <a href="/paints/master-series-paints-core-colors" class="navbar-item">MSP Core Colors</a> <a href="/paints/master-series-paints-bones" class="navbar-item">MSP Bones</a> <a href="/paints/master-series-paints-pathfinder-colors" class="navbar-item">MSP Pathfinder</a> <a href="/paints/master-series-paints-triads" class="navbar-item">MSP Triads</a> <a href="/paints/learn-to-paint-kits" class="navbar-item">Learn to Paint Kits</a> <a href="/paints/paint-sets" class="navbar-item">Paint Sets</a> <a href="/vex" class="navbar-item ">
+VEX Airbrushes
+</a></div></div> <div class="navbar-item has-dropdown is-hoverable"><a href="/search/accessories" class="navbar-link">
+Accessories
+</a> <div class="navbar-dropdown "><a href="/vex" class="navbar-item ">
+VEX Airbrushes
+</a> <a href="/search/bases" class="navbar-item ">
+Base Boss Gaming
+</a> <a href="/paints/#LearnToPaintKits" class="navbar-item">
+Learn to Paint Kits
+</a> <a href="/dice" class="navbar-item">
+Pizza Dungeon Dice
+</a> <a href="/search/case" class="navbar-item">
+Carrying Cases
+</a> <a href="/search/brushes" class="navbar-item">
+Brushes
+</a> <a href="/search/fleshandblood" class="navbar-item">
+Flesh &amp; Blood TCG
+</a></div></div> <a href="http://forum.reapermini.com/" class="navbar-item">
+Forum
+</a> <div class="navbar-item has-dropdown is-hoverable"><a href="/craft" class="navbar-link">Craft</a> <div class="navbar-dropdown"><a href="/craft#conversion" class="navbar-item">Conversion</a> <a href="/craft#painting" class="navbar-item">Painting</a> <a href="/craft#presentation" class="navbar-item">Presentation</a> <a href="/craft#sculpting" class="navbar-item">Sculpting</a> <a href="/dungeondwellers" class="navbar-item">Dungeon Dwellers Painting Guides</a></div></div> <div class="navbar-item has-dropdown is-hoverable"><a href="/retailsupport" class="navbar-link">
+Retailers
+</a> <div class="navbar-dropdown "><a href="/retailsupport/upcoming" class="navbar-item">
+Upcoming Releases
+</a> <a href="/retailsupport/bestsellers" class="navbar-item">
+Best Sellers
+</a> <a href="/retailsupport/rackdeals" class="navbar-item">
+Rack Deals
+</a> <a href="/checkout/#bulk" class="navbar-item">
+Bulk Ordering
+</a> <a href="/retailsupport/productinformation" class="navbar-item">
+Reseller Display Guidelines
+</a> <a href="/retailsupport/resources" class="navbar-item">
+Forms and Resources
+</a></div></div> <div class="navbar-item has-dropdown is-hoverable"><a href="/giftCertificate" class="navbar-link">
+Gift Codes
+</a> <div class="navbar-dropdown "><a href="/giftCertificate" class="navbar-item">
+Purchase Gift Code
+</a> <a href="/redeemgc" class="navbar-item">
+Redeem Gift Code
+</a></div></div> <a href="/gamestore" class="navbar-item">
+Game Store
+</a> <div class="navbar-item has-dropdown is-hoverable"><a href="https://reapercon.com/" class="navbar-link">
+ReaperCon
+</a> <div class="navbar-dropdown "><a href="https://reapercon.com/" class="navbar-item">
+ReaperCon
+</a> <a href="https://reaperconlive.com" class="navbar-item">
+ReaperCon Live Online
+</a></div></div></div></div>
+
+<div class="mainWrapper">
+<nav class="breadcrumb" aria-label="breadcrumbs">
+<ul>
+<li>
+<a class="is-reaper-red-text" href="/miniatures/">Miniatures</a>
+</li>
+<li>
+<a class="is-reaper-red-text" href="/miniatures/figurefinder+metal/latest">figurefinder+metal</a>
+</li>
+<li class="is-active"><span>&nbsp;06160: Reptus Skullbreakers (9)</span></li>
+</ul>
+</nav>
+<div class="columns">
+<div class="column">
+<div class="product-img-block" id="imgApp">
+<div class="product-img-block__main">
+<img-load :product-name="productName" :product-image="mainImage"></img-load>
+<p class="product-img-block__artist">&nbsp;
+<span v-if="artist">Artist: ${artist}</span>
+</p>
+</div>
+<div><i>All figures come unpainted. This figure is multipart. </i></div>
+</div>
+</div>
+<div class="column">
+<div class="product-info-box">
+<h1 class="product-title">Reptus Skullbreakers (9)</h1>
+<p class="product-sculptor">Sculpted by Chaz Elliott</p>
+
+<p class="product-price">$39.99</p>
+<p class="product-sku">SKU: 06160</p>
+<div class="product-list-buttons">
+<div id="addToCartBttn">
+<p class="product-list__item-inventory" style="margin-bottom: 0.55rem">
+<span v-if="inventory < 11"><span v-if="inventory < 0">0</span><span v-else="">${inventory}</span> in stock</span>
+</p>
+<div class="product-bttns" style="margin: 0">
+<button :disabled="inventory <= 0" class="button bttn is-reaper-red is-uppercase bttn--add-product-to-cart" :class="{'is-loading' : ajaxing}" @click="addItem('06160')">
+<i class="fas fa-shopping-cart fa-fw"></i> <span class="bttn-text">ADD TO CART</span>
+</button>
+</div>
+</div>
+<div id="addToWishlist">
+<button style="margin-left: 1rem" class="button bttn is-reaper-red is-uppercase bttn--add-product-to-cart" type="button" @click="showWishlistModal = true"><i aria-hidden="true" class="fa fa-heart"></i></button>
+<div class="modal" :class="{'is-active' : showWishlistModal}">
+<div class="modal-background"></div>
+<div class="modal-card">
+<header class="modal-card-head">
+<p class="modal-card-title">Add to Wishlist</p>
+<button class="delete" aria-label="close" @click="showWishlistModal = false"></button>
+</header>
+<section class="modal-card-body">
+<p>Please <a href="/login">log in</a> to add items to your wishlist</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+<div id="OOSNotification">
+<div v-if="inventoryThreshold > 0">
+<div class="box" style="margin: 2rem 0;" v-if="inventory <= 0 &amp;&amp; !isListed">
+<p style="font-size: 0.85rem; margin-bottom: 0.55rem; font-weight: bold;">Currently out of stock (US)</p>
+<button class="button is-reaper-red" style="margin-bottom: 0.55rem;" @click="notifyMe()">Notify Me</button>
+<p class="help">when <strong>Reptus Skullbreakers (9)</strong> is back in stock!</p>
+<div class="modal" :class="{'is-active' : showOOSNotificationModal}">
+<div class="modal-background"></div>
+<div class="modal-card">
+<header class="modal-card-head">
+<p class="modal-card-title">Notify Me</p>
+<button class="delete" aria-label="close" @click="showOOSNotificationModal = false"></button>
+</header>
+<section class="modal-card-body">
+<p>Please <a href="/login">log in</a> to sign up for notifications</p>
+</section>
+</div>
+</div>
+</div>
+<div class="box" style="margin: 2rem 0;" v-if="isListed">
+<p style="font-size: 0.85rem; font-weight: bold;">Currently out of stock (US)</p>
+<div style="    display: flex;
+    align-items: center;
+    max-width: 500px;
+    justify-content: space-between;
+    margin: 0.5rem 0;">
+<i class="fas fa-check-circle fa-3x" style="color: #1ace1a;"></i> <p style="margin-bottom: 0.5rem"> Set! You'll receive a notification when this item is back in stock.</p>
+</div>
+<button class="button bttn is-reaper-red is-uppercase bttn--add-product-to-cart" @click="cancelNotification()">Cancel your notification</button>
+</div>
+</div>
+</div>
+<div class="product-icons">
+<div class="tooltip">
+<img src="/assets/web/img/metal-black.png" alt="metal">
+<span class="tooltip__tooltiptext">
+metal
+</span>
+</div>
+<div class="tooltip">
+<img src="/assets/web/img/assembly-required-black.png" alt="Assembly Required">
+<span class="tooltip__tooltiptext">
+Assembly Required
+</span>
+</div>
+</div>
+<div class="product-description">The maul has a ritual significance to the Reptus, and those who wield it in battle are feared for their love of splitting skulls. Executions and ritual sacrifices are performed by the splattering of brains; the Skull Breakers are the ones who are most proficient with this grim weapon.</div>
+</div>
+<div class="product-tags">
+<hr>
+<span class="product-tags__label">Found under:</span>
+<div class="tags">
+<a class="tag" href="/miniatures/metal/latest">metal</a>
+<a class="tag" href="/miniatures/dragonman/latest">dragonman</a>
+<a class="tag" href="/miniatures/hammer/latest">hammer</a>
+<a class="tag" href="/miniatures/mace/latest">mace</a>
+<a class="tag" href="/miniatures/armor/latest">armor</a>
+<a class="tag" href="/miniatures/maul/latest">maul</a>
+<a class="tag" href="/miniatures/club/latest">club</a>
+<a class="tag" href="/miniatures/lizardman/latest">lizardman</a>
+<a class="tag" href="/miniatures/reptile/latest">reptile</a>
+<a class="tag" href="/miniatures/warrior/latest">warrior</a>
+<a class="tag" href="/miniatures/two-handed/latest">two-handed</a>
+<a class="tag" href="/miniatures/2h/latest">2h</a>
+<a class="tag" href="/miniatures/mook/latest">mook</a>
+<a class="tag" href="/miniatures/minion/latest">minion</a>
+</div>
+</div>
+<div class="product-tags">
+<span class="product-tags__label">Category:</span>
+<div class="tags">
+<a class="tag" href="/miniatures/Warlord/latest">Warlord</a>
+<a class="tag" href="/miniatures/Reptus/latest">Reptus</a>
+<a class="tag" href="/miniatures/Warlord Army Packs/latest">Warlord Army Packs</a>
+</div>
+<hr>
+</div>
+<div class="prev-next-bttns">
+<a href="/miniatures/figurefinder+metal/latest/06159" class="bttn is-reaper-red is-uppercase prev-next-bttn prev-next-bttn--prev">
+<i class="fas fa-fw fa-chevron-left"></i> Previous</a>
+<a href="/miniatures/figurefinder+metal/latest/06161" class="bttn is-reaper-red is-uppercase prev-next-bttn prev-next-bttn--next">Next
+<i class="fas fa-fw fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer footer-wrapper">
+<div class="footer__logo">
+<img alt="Reaper Mini" class="footer__logo" src="/assets/web/img/reaperfooter.png">
+</div>
+<div class="columns is-centered">
+<div class="column"></div>
+<div class="column  is-one-third-mobile">
+<h4 class="footer-heading">Social Media</h4>
+<ul class="footer-list">
+<li>
+<a href="https://facebook.com/reapermini">
+<i class="fab fa-facebook-f fa-fw"></i> Facebook</a>
+</li>
+<li>
+<a href="https://twitter.com/reapermini">
+<i class="fab fa-twitter fa-fw"></i> Twitter</a>
+</li>
+<li>
+<a href="https://www.instagram.com/reaperminiatures/">
+<i class="fab fa-instagram fa-fw"></i> Instagram</a>
+</li>
+<li>
+<a href="https://twitch.tv/reaperminiatures/">
+<i class="fab fa-twitch fa-fw"></i> Twitch</a>
+</li>
+<li>
+<a href="https://youtube.com/user/ReaperMiniOfficial/">
+<i class="fab fa-youtube fa-fw"></i> YouTube</a>
+</li>
+
+</ul>
+</div>
+<div class="column  is-one-third-mobile">
+<h4 class="footer-heading">Information</h4>
+<ul class="footer-list">
+
+
+
+
+
+
+
+
+<li>
+<a href="/copyright">
+<i class="far fa-copyright fa-fw"></i> Copyright</a>
+</li>
+<li>
+<a href="/privacy">
+<i class="fas fa-user-secret fa-fw"></i> Your Privacy</a>
+</li>
+<li>
+<a href="/company">
+<i class="fas fa-phone fa-fw"></i> Company and Contact</a>
+</li>
+<li>
+<a href="/faq">
+<i class="far fa-question-circle"></i>&nbsp;&nbsp;F A Q</a>
+</li>
+
+
+
+
+</ul>
+</div>
+<div class="column  is-one-third-mobile">
+<h4 class="footer-heading">Account</h4>
+<ul class="footer-list">
+<li>
+<a href="/login">
+<i class="fas fa-user fa-fw"></i> Log in</a>
+</li>
+<li>
+<a href="/login">
+<i class="fas fa-user fa-fw"></i> Sign up</a>
+</li>
+</ul>
+</div>
+<div class="column">
+<h4 class="footer-heading">Newsletter sign up</h4>
+<div id="newsletterSignUp" class="newsletter-box"><form><div class="newsletter-box__container"><input placeholder="Enter your Email" type="text" class="newsletter-box__input has-text-black"> <button type="submit" class="newsletter-box__button">Subscribe</button> <!----></div></form></div>
+</div>
+<div class="column"></div>
+</div>
+<div class="footer__notice">Need help?
+<a href="mailto:help@reapermini.com">help@reapermini.com</a>
+<a href="tel:++19404846464">(940) 484-6464</a>
+<br> © 2020 Hobby-Q, Inc. DBA Reaper Miniatures. All rights reserved.
+</div>
+</div>
+<script type="text/javascript">
+    var header = new Vue({
+        el: '#header',
+        delimiters : ['${', '}'],
+        data: function(){
+            return {
+                showMobileMenu: false,
+                showCurrency: false,
+                topSearch: '',
+            }
+        }
+    });
+
+    var newsletter = new Vue({
+        el: '#newsletterSignUp',
+        delimiters : ['${', '}'],
+        data: {
+                newsletterEmail: '',
+                success: false,
+            },
+        methods: {
+            validateEmail: function(email) {
+                    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(email);
+            },
+            handleSubmit: function() {
+                var cleanedEmail = this.newsletterEmail.trim().toLowerCase()
+                if (this.validateEmail(cleanedEmail)) {
+                    var that = this;
+                    var data = {
+                        email: cleanedEmail
+                    }
+                    fetch('/newslettersignup', {
+                        method: 'POST', // or 'PUT'
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    }).then(function () {
+                        that.success = true
+                        setTimeout(function(){
+                            that.success = false
+                        }, 1000);
+                    })
+                }
+            }
+        }
+    });
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.js" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript"></script><!--<script src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript"></script>-->
+<style>
+#addToCartBttn {
+  -moz-transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+
+}
+</style>
+<!--<script type="text/javascript">
+
+    var updateCartTotal = function(i) {
+    var cartElem = document.getElementById('cartTotalQTY');
+    var sneakys = document.getElementById('sneakys');
+    var newTotal = 0;
+    if (i !== 0)
+        newTotal = parseInt(cartElem.textContent) + i;
+    cartElem.textContent = newTotal;
+    sneakys.textContent = (newTotal === 1)?'':'s';
+
+};
+
+    
+    
+    
+
+
+    
+
+
+    var state = {
+      inventory: 9994,
+      inventoryBuffer: 3,
+      inventoryThreshold: 12,
+      ajaxing: false
+    };
+
+
+    var mutations = {
+          SET_AJAXING: function(state, payload) {
+            state.ajaxing = payload;
+          },
+          SET_INVENTORY: function(state, payload) {
+                var invTot = payload - state.inventoryBuffer;
+                state.inventory =  invTot >= 0 ? invTot : 0;
+          }
+    };
+
+
+    const store = new Vuex.Store({
+      state: state,
+      mutations: mutations,
+    });
+
+
+
+    var imageComponent = {
+    delimiters: ['${', '}'],
+    props: ['productImage', 'productName'],
+    template: '<div><img class="product-img-block__src" src="/assets/web/img/image-loader.gif" ref="img" :alt="productName"></div>',
+    mounted: function () {
+      this.loadImage();
+    },
+    watch: {
+      productImage: function () {
+        // if productImage changes;
+        // reset our image src to loader, then loadImage()
+        this.$refs.img.src = '/assets/web/img/image-loader.gif';
+        this.loadImage();
+      }
+    },
+    methods: {
+      loadImage: function () {
+        var image = this.$refs.img;
+        if (image) {
+          var productImg = new Image();
+          productImg.onload = function () {
+            image.src = this.src;
+          };
+          var mainImage = this.productImage;
+          if (mainImage) {
+            productImg.src = mainImage
+          } else {
+            productImg.src = "/assets/web/img/noimage.png";
+          }
+        }
+      }
+    }
+  };
+
+    var addToWishlist = new Vue({
+        el: '#addToWishlist',
+      store: store,
+
+      delimiters: ['${', '}'],
+        data: {
+            wishlists: [],
+            showWishlistModal: false,
+            selectedWishlist: 'Default',
+        },
+        computed: {
+          ajaxing: function() {
+              return this.$store.state.ajaxing
+            }
+        },
+        methods: {
+            addToWishlist: function (sku, name) {
+              var that = this;
+              that.$store.commit('SET_AJAXING', true)
+              axios.post('/wishlist/incrementsku', {sku: sku, name: name, listID: that.selectedWishlist})
+                    .then(function (response) {
+                        setTimeout(function () {
+                            that.showWishlistModal = false;
+                            that.$store.commit('SET_AJAXING', false)
+                        }, 100)
+                    }).catch(function (err) {
+                    console.log(err);
+                });
+            },
+        }
+    });
+
+
+
+
+    var OOSNotification = new Vue({
+      el: '#OOSNotification',
+      store: store,
+      delimiters: ['${', '}'],
+      data: {
+        showOOSNotificationModal: false,
+        isListed: false,
+      },
+      mounted: function() {
+        this.notificationRequested()
+      },
+      computed: {
+        ajaxing: function() {
+          return this.$store.state.ajaxing
+        },
+        inventory: function() {
+          return this.$store.state.inventory
+        },
+        inventoryThreshold: function() {
+          return this.$store.state.inventoryThreshold
+        }
+      },
+    methods: {
+
+
+        cancelNotification: function() {
+          var that = this;
+          that.$store.commit('SET_AJAXING', true)
+            axios.post('/oosnotification/cancel', {sku: '06160'})
+                    .then(function (response) {
+                      that.isListed = false
+                      that.$store.commit('SET_AJAXING', false)
+                    }).catch(function (err) {
+              console.log(err);
+            });
+        },
+
+
+      notificationRequested: function() {
+
+        var requested = {}
+
+        if (!_.isEmpty(requested)) {
+
+          var isListed = _.find( requested['US'] , function(o) { return o.sku === '06160'; });
+
+          if (isListed) {
+            this.isListed = true
+          } else {
+            this.isListed = false
+          }
+        }
+
+      },
+      notifyMe: function () {
+          if (!this.ajaxing) {
+        var that = this;
+        that.$store.commit('SET_AJAXING', true)
+
+        
+        that.showOOSNotificationModal = true
+        
+          }
+
+      },
+    }
+    });
+
+
+
+    var addToCartBttn = new Vue({
+      el: '#addToCartBttn',
+      store: store,
+
+      delimiters: ['${', '}'],
+      computed: {
+        ajaxing: function() {
+          return this.$store.state.ajaxing
+        },
+        inventory: function() {
+          return this.$store.state.inventory
+        }
+      },
+      methods : {
+          addItem : function(sku, i) {
+              var that = this;
+              that.$store.commit('SET_AJAXING', true)
+              axios.post('/cart/add/' + sku)
+                  .then(function (response) {
+                      if (response.data.cart) {
+                          that.$store.commit('SET_INVENTORY' ,  response.data.inventory['US']);
+                          updateCartTotal(1);
+                          setTimeout( function() {
+                            that.$store.commit('SET_AJAXING', false)
+                          },100)
+                      } else {
+                        that.$store.commit('SET_AJAXING', false)
+                        alert(response.data.message)
+                      }
+                  }).catch(function (err) {
+                  console.log(err);
+                  that.$store.commit('SET_AJAXING', false)
+              });
+          },
+      }
+  });
+
+
+
+  var imageApp = new Vue({
+    el: '#imgApp',
+    delimiters: ['${', '}'],
+    data: function () {
+      return {
+        thumbSelected: 1,
+        productName: "Reptus Skullbreakers (9)",
+        mainImage: "https://images.reapermini.com/4/06160_G.jpg",
+        artist: false
+    }
+  },
+  methods: {
+    updateImg: function(img, artist, x) {
+      this.mainImage = img;
+      this.artist = artist;
+      this.thumbSelected = x;
+    }
+  },
+  components: {
+    'img-load' : imageComponent
+  },
+});
+
+</script>-->
+<!--<script type="text/javascript">
+	function init() {
+		var imgDefer = document.getElementsByTagName('img');
+		for (var i=0; i<imgDefer.length; i++) {
+			if(imgDefer[i].getAttribute('data-src')) {
+				imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+			} } }
+	window.onload = init;
+</script>-->
+
+
+</body></html>
