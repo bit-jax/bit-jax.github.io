@@ -16,10 +16,10 @@ options.headless=True
 
 driver = webdriver.Chrome()
 
-url = 'https://www.reapermini.com/miniatures/figurefinder+metal/latest/'
+url = 'https://www.reapermini.com/miniatures/latest/'
 
 def get_page_total(): # finds the text of the button for the last page
-    start_url = 'https://www.reapermini.com/miniatures/figurefinder+metal/latest/page/1'
+    start_url = 'https://www.reapermini.com/miniatures/latest/page/1'
     page = requests.get(start_url)
     soup = BeautifulSoup(page.content, 'html.parser')
     pages = soup.find_all(class_='pagination-link is-reaper-red-text')
@@ -36,11 +36,10 @@ def get_name(): # gets name of the mini
     name = driver.find_element_by_class_name('product-title').text
     return name
 
-def get_desc(): # gets description of the mini
-    desc = ''
-    desc = driver.find_element_by_class_name('product-description').text
-    return desc
-
+# def get_desc(): # gets description of the mini
+#     desc = ''
+#     desc = driver.find_element_by_class_name('product-description').text
+#     return desc
 
 def get_img(): # gets url for the image of the mini
     img = driver.find_element_by_class_name('product-img-block__src')
@@ -48,7 +47,7 @@ def get_img(): # gets url for the image of the mini
 
 # list that will be converted to csv after all mini data is added
 mini = [[
-    'name','description','manufacturer','image links','url','gender',
+    'name','manufacturer','image links','url','gender',
     'class','race','size','setting','weapon','wearing','game','painted',
 'nsfw','grouping']]
 
@@ -61,11 +60,11 @@ for i in range(1,int(get_page_total())):
         reaper_url = 'https://www.reapermini.com'
         mini_url = reaper_url+i # adds mini specific half of url to main url
         driver.get(mini_url)# switch to selenium to get java elements
-        # time.sleep(1)
-        mini.append([get_name(),get_desc(),'Reaper',get_img(),mini_url,'','','','','','','','','','',''])
-        # print(mini)
-# with open ('reaper.csv', 'w') as file:
-#     file.write(str(mini))
+        time.sleep(1)
+        mini.append([get_name(),'Reaper',get_img(),mini_url,'','','','','','','','','','',''])
+
+with open ('reaper.csv', 'w') as file:
+    file.write(str(mini))
 
 
         # img = driver.find_element_by_class_name('product-img-block__src')
