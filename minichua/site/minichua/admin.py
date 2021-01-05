@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Mini, Tags
+
+admin.site.register(Mini)
+admin.site.register(Tags)
