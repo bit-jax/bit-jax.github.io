@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minichua: Miniature Model Finder</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Mini Finder</h1> 
+        <label for='tag'>Filter by tag:</label>
+        <select @change='filterMinis($event)' name='tag' id='tag' v-model='key'>
+            <option v-for='word in tag' value='word'>{{word}}</option>
+        </select>
+        <ul>
+            <li v-for='mini in minis'>
+                <p>{{ mini.name }}</p>
+                <p>{{ mini.image_url }}
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                minis: [],
+                key: '',
+            },
+            methods: {
+                filterMinis : function () {
+                    axios({
+                        url: 'http://localhost:8000/apis/v1/tag/',
+                        method: 'get',
+                        params: {
+                            tag : this.key
+                        }
+                    }).then (response => {
+                        this.minis = response.data
+                    })
+                },
+            },
+            mounted: function() {
+                axios({
+                    method: 'get',
+                    url: 'http://localhost:8000/apis/v1',
+                }).then(response => {
+                    this.minis = response.data
+                })
+            }
+        })
+    </script>
+</body>
+</html>
+
+
+<!-- 
+methods: {
+    showMinis: function() {
+        axios({
+            method: 'get',
+            url: 'http://localhost:8000/apis/v1',
+        }).then(response => {
+            this.minis = response.data
+        })
+    }
+}, -->

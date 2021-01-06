@@ -5,7 +5,7 @@ class TagsSerializer(serializers.ModelSerializer):
     # tags = serializers.ListField(allow_empty=True)
     class Meta:
         fields = (
-            'tags',
+            'tag',
         )
         model = models.Tags
 

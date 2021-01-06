@@ -1,0 +1,1 @@
+fix minis with blank entries in reaper api command
