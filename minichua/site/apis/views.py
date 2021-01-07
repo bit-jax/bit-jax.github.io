@@ -7,10 +7,12 @@ from .serialzers import MiniSerializer, TagsSerializer
 class ListMinichua(generics.ListCreateAPIView):
     queryset = models.Mini.objects.all()
     serializer_class = MiniSerializer
+    filterset_fields = ['tags']
 
 class DetailMinichua(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Mini.objects.all()
     serializer_class = MiniSerializer
+    filterset_fields = ['tags']
 
 class ListTags(generics.ListCreateAPIView):
     queryset = models.Tags.objects.all()

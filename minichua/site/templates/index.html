@@ -9,13 +9,14 @@
     <div id="app">
         <h1>Mini Finder</h1> 
         <label for='tag'>Filter by tag:</label>
-        <select @change='filterMinis($event)' name='tag' id='tag' v-model='key'>
-            <option v-for='word in tag' value='word'>{{word}}</option>
+        <select @change='tagSelect($event)' name='tag' id='tag' v-model='key'>
+            <option>-</option>
+            <option v-for='word in tag_options' v-bind:value='word.id'>{{ word.tag }}</option>
         </select>
         <ul>
             <li v-for='mini in minis'>
                 <p>{{ mini.name }}</p>
-                <p>{{ mini.image_url }}
+                <p>{{ mini.image_url }}</p>
             </li>
         </ul>
     </div>
@@ -27,28 +28,32 @@
             data: {
                 minis: [],
                 key: '',
+                tag_options: '',
             },
             methods: {
                 filterMinis : function () {
                     axios({
-                        url: 'http://localhost:8000/apis/v1/tag/',
+                        url: 'http://localhost:8000/apis/v1/',
                         method: 'get',
                         params: {
-                            tag : this.key
+                            tags : this.key
                         }
                     }).then (response => {
                         this.minis = response.data
                     })
                 },
+                tagSelect(event){
+                    this.filterMinis()
+                },
             },
             mounted: function() {
                 axios({
+                    url: 'http://localhost:8000/apis/v1/tag/',
                     method: 'get',
-                    url: 'http://localhost:8000/apis/v1',
-                }).then(response => {
-                    this.minis = response.data
+                }).then (response => {
+                    this.tag_options = response.data
                 })
-            }
+            },
         })
     </script>
 </body>
