@@ -1,11 +1,13 @@
 from django.urls import path
 
-from .views import ListMinichua, DetailMinichua, ListTags, DetailTags
+from . import views
 
 app_name = 'minichua'
 
 urlpatterns = [
-    path('', ListMinichua.as_view(), name='home'),
-    path('<int:pk>/', DetailMinichua.as_view(), name='mini'),
-    path('tag/', ListTags.as_view(), name='tags'),
-]
+    path('', views.ListMinichua.as_view(), name='home'),
+    path('<int:pk>/', views.DetailMinichua.as_view(), name='mini'),
+    path('tag/', views.ListTags.as_view(), name='tags'),
+    path('signup/', views.SignupView.as_view(), name='signup')
+    
+    ]

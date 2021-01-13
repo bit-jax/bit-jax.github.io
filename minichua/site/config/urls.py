@@ -19,4 +19,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('apis/v1/', include('apis.urls')),
+    path('user/', include('django.contrib.auth.urls')),
+    path('user/', include('apis.urls')),
+    path('', include('minichua.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),     mozilla tutorial
 ]
