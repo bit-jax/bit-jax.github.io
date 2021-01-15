@@ -8,6 +8,9 @@
             <option>-</option>
             <option v-for='word in tag_options' v-bind:value='word.id'>[[ word.tag ]]</option>
         </select>
+        <input type='text' @keyup.enter='searchMinis' name='tag' v-model='search'>
+        <button @click='searchMinis'>Search</button>
+        <button @click='showAll' name='all'>Browse All</button>
         <ul>
             <li v-for='mini in minis.results'>
                 <p>[[ mini.name ]]</p>
@@ -17,18 +20,33 @@
                 </div>
                 <div v-if='mini.displayDetail'>
                     <p>[[ mini.name ]]</p>
-                        <img class='col-md-1' v-for='img in mini.image_url' :src='img'>
+                    <img class='col-md-1' v-for='img in mini.image_url' :src='img'>
+                    <a :href='mini.url'>[[ mini.name ]]'s page</a>
                     <button @click='mini.displayDetail = false'>hide</button>
                     <ul>
                         <li v-for='tag in mini.tag_names'>[[ tag ]]</li>
                     </ul>
+                    <input type='text' v-model='new_tag'>
+                    <button @click='createTag(mini)'>Add Tag</button>
                 </div> 
             </li>
         </ul>
-        <template v-if='minis.results'>           
-            <button v-if='page != 1' @click='firstPage()' type='button'>First Page</button>
-            <button v-if="page > 1" @click='previousPage()' type='button'>Previous Page</button>
-            <button v-if='minis.next' @click='nextPage()' type='button'>Next Page</button>
+        <template v-if='minis.results'>
+            <template v-if='method === "filter"'>    
+                <button v-if='page != 1' @click='firstPageFilter()' type='button'>First Page</button>
+                <button v-if="page > 1" @click='previousPageFilter()' type='button'>Previous Page</button>
+                <button v-if='minis.next' @click='nextPageFilter($event)' type='button'>Next Page</button>
+            </template>
+            <template v-if='method === "search"'>    
+                <button v-if='page != 1' @click='firstPageSearch()' type='button'>First Page</button>
+                <button v-if="page > 1" @click='previousPageSearch()' type='button'>Previous Page</button>
+                <button v-if='minis.next' @click='nextPageSearch($event)' type='button'>Next Page</button>
+            </template>   
+            <template v-if='method === "all"'>    
+                <button v-if='page != 1' @click='firstPageAll()' type='button'>First Page</button>
+                <button v-if="page > 1" @click='previousPageAll()' type='button'>Previous Page</button>
+                <button v-if='minis.next' @click='nextPageAll($event)' type='button'>Next Page</button>
+            </template>          
         </template>
     </div>
     
@@ -43,8 +61,9 @@
                 key: '',
                 tag_options: '',
                 page: 1,
-                last_page: false,
-                // mini_tags: [],
+                new_tag: '',
+                search: '',
+                method: '',
             },
             delimiters: [
                 '[[',']]'
@@ -79,47 +98,126 @@
                             return mini
                         })
                         this.minis = manipulatedData
+                        this.method = 'filter'
+                    })
+                },
+                searchMinis : function () {
+                    axios({
+                        url: this.baseURL+this.page,
+                        method: 'get',
+                        params: {
+                            tags__tag: this.search,
+                            page: this.page
+                        }
+                    }).then (response => {
+                        const manipulatedData = response.data
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.displayDetail = false
+                            return mini
+                        })
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.image_url = mini.image_url.slice(2,-2).split("', '")
+                            return mini
+                        })
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.tag_names = []
+                            mini.tags.forEach(mini_tag => {
+                                let tag = this.tag_options.find(tag => {
+                                    return tag.id === mini_tag
+                                })
+                                mini.tag_names.push(tag.tag)
+                            });
+                            return mini
+                        })
+                        this.minis = manipulatedData
+                        this.method = 'search'
+                    })
+                },
+                showAll : function () {
+                    axios({
+                        url: this.baseURL+this.page,
+                        method: 'get',
+                        params: {
+                        }
+                    }).then (response => {
+                        const manipulatedData = response.data
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.displayDetail = false
+                            return mini
+                        })
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.image_url = mini.image_url.slice(2,-2).split("', '")
+                            return mini
+                        })
+                        manipulatedData.results = manipulatedData.results.map(mini => {
+                            mini.tag_names = []
+                            mini.tags.forEach(mini_tag => {
+                                let tag = this.tag_options.find(tag => {
+                                    return tag.id === mini_tag
+                                })
+                                mini.tag_names.push(tag.tag)
+                            });
+                            return mini
+                        })
+                        this.minis = manipulatedData
+                        this.method = 'all'
+                    })
+                },
+                createTag: function(mini){
+                    axios({
+                        url: 'http://localhost:8000/apis/v1/tag/',
+                        method: 'post',
+                        data: {
+                                tag: this.new_tag,
+                                mini_set: [mini.id]
+                        }
                     })
                 },
                 tagSelect(event){
                     this.page = 1
                     this.filterMinis()
                 },
-                firstPage: function () {
+                firstPageFilter: function () {
                     this.page = 1,
                     this.filterMinis()
                 },
-                nextPage: function () {
+                nextPageFilter: function (event) {
                     this.page += 1,
                     this.filterMinis()
                 },
-                previousPage: function () {
+                previousPageFilter: function () {
                     this.page -= 1,
                     this.filterMinis()
+                },
+                firstPageSearch: function () {
+                    this.page = 1,
+                    this.searchMinis()
+                },
+                nextPageSearch: function (event) {
+                    this.page += 1,
+                    this.searchMinis()
+                },
+                previousPageSearch: function () {
+                    this.page -= 1,
+                    this.searchMinis()
+                },
+                firstPageAll: function () {
+                    this.page = 1,
+                    this.showAll()
+                },
+                nextPageAll: function (event) {
+                    this.page += 1,
+                    this.showAll()
+                },
+                previousPageAll: function () {
+                    this.page -= 1,
+                    this.showAll()
                 },
                 showDetail: function (event) {
                     this.displayDetail = true
                 },
                 hideDetail: function () {
                     this.displayDetail = false
-                },
-                showTags: function () {
-                    // this.tag_options.filter(this.key) = this.mini_tags
-                    // console.log(this.mini_tags)
-
-                    // axios({
-                    //     url: 'http://localhost:8000/apis/v1/tag/',
-                    //     method: 'get',
-                    //     params: {
-                    //         id: this.key
-                    //     },
-                    // }).then (response => {
-                    //     this.mini_tags = response.data,
-                    //     console.log(this.mini_tags)
-                    //     console.log(this.tag_options)
-                    //     console.log("hi")
-                    //     console.log(this.key)
-                    // })
                 }
             },
             mounted: function() {
@@ -129,7 +227,7 @@
                 }).then (response => {
                     this.tag_options = response.data
                 })
-            },
+            }
         })
     </script>
 {% endblock content %}

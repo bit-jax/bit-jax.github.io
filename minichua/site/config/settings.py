@@ -67,6 +67,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:5500',
     'http://localhost:8000',
     'http://127.0.0.1:5500',
+    'http://127.0.0.1:8000',
 )
 
 ROOT_URLCONF = 'config.urls'
@@ -139,4 +140,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'http://127.0.0.1:5500/minichua/site/templates/index.html'
+LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000'
+LOGOUT_REDIRECT_URL = 'http://127.0.0.1:8000'
+
+LOGIN_URL = 'user/login'

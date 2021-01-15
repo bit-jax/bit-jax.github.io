@@ -11,14 +11,14 @@ class Command(BaseCommand):
 
         my_api = requests.get('http://localhost:8000/apis/v1')
         my_data = json.loads(my_api.text)
-        # Mini.objects.all().delete()
+        Mini.objects.all().delete()
 
         api = []
         categories = ['Warlord Army Packs', 'Warlord', 'Special Edition Figures', 'Savage Worlds', 'Reaper Dungeon Dwellers', 'Pathfinder Bones', 'Pathfinder', 'Numenara', 'Nefsokar', 'Necropolis', 'Mercenary', 'Holiday', 'Elves', 'Dwarves', 'Darkspawn', 'Dark Heaven Legends Army Packs', 'Dark Heaven Legends', 'Crusaders', 'Chronoscope Bones', 'Chronoscope', 'CAV: Strike Operations', 'Bones']
         count = 0
         checklist = []
-        for obj in my_data:
-            checklist.append(obj['name'])
+        # for obj in (my_data):
+        #     checklist.append(obj['name'])
 
         for item in json_data:
             if [ele for ele in categories if (ele in item['category'])]:
@@ -29,6 +29,7 @@ class Command(BaseCommand):
                     mini = Mini(
                         name = item['name'],
                         image_url = images,
+                        url = 'https://www.reapermini.com/miniatures/'+item['sku']
                     )
                     mini.save()
                     count += 1

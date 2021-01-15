@@ -15,13 +15,13 @@ class ListMinichua(generics.ListCreateAPIView):
     queryset = models.Mini.objects.all()
     serializer_class = MiniSerializer
     pagination_class = CustomPagination
-    filterset_fields = ['tags']
+    filterset_fields = ['tags','tags__tag']
 
 class DetailMinichua(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Mini.objects.all()
     serializer_class = MiniSerializer
     template_name = 'detail.html'
-    filterset_fields = ['tags']
+    filterset_fields = ['tags', 'tags__tag']
 
 class ListTags(generics.ListCreateAPIView):
     queryset = models.Tags.objects.all()

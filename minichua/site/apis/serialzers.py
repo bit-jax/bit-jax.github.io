@@ -17,6 +17,7 @@ class MiniSerializer(serializers.ModelSerializer):
             'name',
             'image_url',
             'tags',
+            'url',
         )
         model = models.Mini
 

@@ -4,6 +4,7 @@ class Mini(models.Model):
     name = models.CharField(max_length=200)
     image_url = models.CharField(max_length=600)
     tags = models.ManyToManyField('Tags', blank=True)
+    url = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
