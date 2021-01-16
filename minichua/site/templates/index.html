@@ -11,25 +11,27 @@
         <input type='text' @keyup.enter='searchMinis' name='tag' v-model='search'>
         <button @click='searchMinis'>Search</button>
         <button @click='showAll' name='all'>Browse All</button>
-        <ul>
-            <li v-for='mini in minis.results'>
-                <p>[[ mini.name ]]</p>
-                <img :src='mini.image_url[0]'>
-                <div v-if='mini.displayDetail != true'>
-                    <button @click='mini.displayDetail = true'>show</button>
-                </div>
-                <div v-if='mini.displayDetail'>
+        <ul class='container'>
+            <div class='row row-cols-2'>
+                <li v-for='mini in minis.results' class ='col'>
                     <p>[[ mini.name ]]</p>
-                    <img class='col-md-1' v-for='img in mini.image_url' :src='img'>
-                    <a :href='mini.url'>[[ mini.name ]]'s page</a>
-                    <button @click='mini.displayDetail = false'>hide</button>
-                    <ul>
-                        <li v-for='tag in mini.tag_names'>[[ tag ]]</li>
-                    </ul>
-                    <input type='text' v-model='new_tag'>
-                    <button @click='createTag(mini)'>Add Tag</button>
-                </div> 
-            </li>
+                    <img :src='mini.image_url[0]'>
+                    <div v-if='mini.displayDetail != true'>
+                        <button @click='mini.displayDetail = true'>show</button>
+                    </div>
+                    <div v-if='mini.displayDetail'>
+                        <p>[[ mini.name ]]</p>
+                        <img class='col-md-1' v-for='img in mini.image_url' :src='img'>
+                        <a :href='mini.url'>[[ mini.name ]]'s page</a>
+                        <button @click='mini.displayDetail = false'>hide</button>
+                        <ul>
+                            <li v-for='tag in mini.tag_names'>[[ tag ]]</li>
+                        </ul>
+                        <input type='text' v-model='new_tag' @keyup.enter='createTag(mini)'>
+                        <button @click='createTag(mini)'>Add Tag</button>
+                    </div> 
+                </li>
+            </div>
         </ul>
         <template v-if='minis.results'>
             <template v-if='method === "filter"'>    
@@ -64,6 +66,8 @@
                 new_tag: '',
                 search: '',
                 method: '',
+                error_message: false,
+                exists: null,
             },
             delimiters: [
                 '[[',']]'
@@ -99,6 +103,7 @@
                         })
                         this.minis = manipulatedData
                         this.method = 'filter'
+                        this.search = ''
                     })
                 },
                 searchMinis : function () {
@@ -131,6 +136,7 @@
                         })
                         this.minis = manipulatedData
                         this.method = 'search'
+                        this.key = ''
                     })
                 },
                 showAll : function () {
@@ -161,6 +167,8 @@
                         })
                         this.minis = manipulatedData
                         this.method = 'all'
+                        this.key = ''
+                        this.search = ''
                     })
                 },
                 createTag: function(mini){
@@ -173,6 +181,20 @@
                         }
                     })
                 },
+                // pushTag: function(mini){
+                //     this.checkTag(this.new_tag)
+                //     if (!this.exists) {
+                //         this.createTag(mini)
+                //         console.log(this.exists)
+                //     }
+                // },
+                // checkTag: function(miniId) {
+                //     this.tag_options.map(name => {
+                //         if (name.name = this.new_tag) {
+                //             this.exists = true
+                //         } 
+                //     })
+                // },
                 tagSelect(event){
                     this.page = 1
                     this.filterMinis()

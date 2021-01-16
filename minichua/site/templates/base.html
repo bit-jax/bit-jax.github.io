@@ -13,9 +13,7 @@
         </div>
         <div class="nav-right">
             {% if request.user.is_authenticated %}
-                {% comment %} <p>Welcome back, <a href="{% url 'minichua:profile' request.user.username%}">{{ request.user.username }}</a></p> {% endcomment %}
                 <p><a href="{% url 'logout' %}">Logout</a></p>
-                {% comment %} <p><a href="{% url 'minichua:new' %}">New Post</a></p> {% endcomment %}
             {% else %}
                 <a href="{% url 'login' %}">Login</a></p>
                 <a href="{% url 'minichua:signup'%}">Sign Up</a></p>
