@@ -1,0 +1,34 @@
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+  }
+
+.nav-right a:hover {
+    color: #0f4c81;
+}
+  
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+    margin-left: auto;
+}
+
+.nav-right p {
+    margin-left: .25rem;
+    margin-right: .25rem;
+  }
+
+#taglist {
+    border-style: hidden;
+    background-color: rgb(189, 185, 185);
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    /* display:inline-block; */
+    width: fit-content;
+}

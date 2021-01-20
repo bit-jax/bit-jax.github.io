@@ -12,21 +12,23 @@
         <button @click='searchMinis'>Search</button>
         <button @click='showAll' name='all'>Browse All</button>
         <ul class='container'>
-            <div class='row row-cols-2'>
-                <li v-for='mini in minis.results' class ='col'>
+            <div class='row'>
+                <li v-for='mini in minis.results' class ='col-md-6'>
                     <p>[[ mini.name ]]</p>
-                    <img :src='mini.image_url[0]'>
+                    <img v-if='mini.displayDetail != true' class='img-thumbnail' :src='mini.image_url[0]'>
                     <div v-if='mini.displayDetail != true'>
                         <button @click='mini.displayDetail = true'>show</button>
                     </div>
                     <div v-if='mini.displayDetail'>
                         <p>[[ mini.name ]]</p>
-                        <img class='col-md-1' v-for='img in mini.image_url' :src='img'>
+                        <img class='col-md-1, img-thumbnail' v-for='img in mini.image_url' :src='img'>
                         <a :href='mini.url'>[[ mini.name ]]'s page</a>
                         <button @click='mini.displayDetail = false'>hide</button>
-                        <ul>
-                            <li v-for='tag in mini.tag_names'>[[ tag ]]</li>
-                        </ul>
+                        <div class='container'>
+                            <div class ='row'>
+                                <div id='taglist'  v-for='tag in mini.tag_names'>[[ tag ]]</div>
+                            </div>
+                        </div>
                         <input type='text' v-model='new_tag' @keyup.enter='createTag(mini)'>
                         <button @click='createTag(mini)'>Add Tag</button>
                     </div> 

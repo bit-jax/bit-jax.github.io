@@ -2,7 +2,7 @@ from django.urls import path
 
 from . import views
 
-app_name = 'minichua'
+app_name = 'mini_api'
 
 urlpatterns = [
     path('', views.ListMinichua.as_view(), name='home'),

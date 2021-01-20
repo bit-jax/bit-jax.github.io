@@ -21,3 +21,14 @@ class MiniSerializer(serializers.ModelSerializer):
         )
         model = models.Mini
 
+    # def create(self, validated_data):
+    #     new_tag = validated_data.pop('tags')
+    #     tag_id = new_tag.get('id', None)
+    #     tag = new_tag.get('tag', None)
+    #     mini_set = new_tag.get('mini_set', None)
+
+    #     if not tag:
+    #         raise serializers.ValidationError('no tag found')
+
+    #     tag_obj = Tags.objects.get_or_create(tag=tag,mini_set=mini_set)
+    #     validated_data.update({"new_tag":tag_obj})
