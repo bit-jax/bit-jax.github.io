@@ -10,6 +10,10 @@ class TagsSerializer(serializers.ModelSerializer):
         )
         model = models.Tags
 
+    # def create(self, validated_data):
+    #     new_tag = validated_data.pop('tag')
+
+
 class MiniSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (

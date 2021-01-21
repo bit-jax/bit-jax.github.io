@@ -29,8 +29,8 @@
                                 <div id='taglist'  v-for='tag in mini.tag_names'>[[ tag ]]</div>
                             </div>
                         </div>
-                        <input type='text' v-model='new_tag' @keyup.enter='createTag(mini)'>
-                        <button @click='createTag(mini)'>Add Tag</button>
+                        <input type='text' v-model='new_tag' @keyup.enter='pushTag(mini)'>
+                        <button @click='pushTag(mini)'>Add Tag</button>
                     </div> 
                 </li>
             </div>
@@ -64,17 +64,76 @@
                 minis: [],
                 key: '',
                 tag_options: '',
+                minitag: [],
                 page: 1,
                 new_tag: '',
                 search: '',
                 method: '',
                 error_message: false,
                 exists: null,
+                tag_exists: null,
+                relation_exists: null,
             },
             delimiters: [
                 '[[',']]'
             ],
             methods: {
+                createTag: function(mini){
+                    axios({
+                        url: 'http://localhost:8000/apis/v1/tag/',
+                        method: 'post',
+                        data: {
+                                tag: this.new_tag,
+                                mini_set: [mini.id]
+                        }
+                    })
+                },
+                addTag: function(mini){
+                    axios({
+                        url: 'http://localhost:8000/apis/v1/tag/',
+                        method: 'patch',
+                        data: {
+                                mini_set: [mini.id]
+                        }
+                    })
+                },
+                // pushTag: function(mini){
+                //     this.checkTag()
+                //     if (!this.exists) {
+                //         this.createTag(mini)
+                //     }
+                // },
+                // checkTag: function() {
+                //     this.exists = false
+                //     this.tag_options.map(name => {
+                //         if (name.tag === this.new_tag) {
+                //             this.exists = true
+                //         } 
+                //     })
+                // },
+                pushTag: function(mini){
+                    this.checkTag(mini)
+                    if (!this.tag_exists) {
+                        this.createTag(mini)
+                    }
+                    else if (!this.relation_exists) {
+                        this.addTag(mini)
+                    }
+                },
+                checkTag: function(mini) {
+                    this.tag_exists = false
+                    this.relation_exists = false
+                    this.tag_options.map(name => {
+                        if (name.tag === this.new_tag) {
+                            this.tag_exists = true
+                        }
+                    mini.tag_names.map(tag => {
+                        if (tag.tag_names === this.new_tag) {
+                            this.relation_exists = true
+                        }
+                    })
+                    })
+                },
                 filterMinis : function () {
                     axios({
                         url: this.baseURL+this.page,
@@ -100,6 +159,7 @@
                                     return tag.id === mini_tag
                                 })
                                 mini.tag_names.push(tag.tag)
+                                tag_names = this.minitag
                             });
                             return mini
                         })
@@ -173,30 +233,6 @@
                         this.search = ''
                     })
                 },
-                createTag: function(mini){
-                    axios({
-                        url: 'http://localhost:8000/apis/v1/tag/',
-                        method: 'post',
-                        data: {
-                                tag: this.new_tag,
-                                mini_set: [mini.id]
-                        }
-                    })
-                },
-                // pushTag: function(mini){
-                //     this.checkTag(this.new_tag)
-                //     if (!this.exists) {
-                //         this.createTag(mini)
-                //         console.log(this.exists)
-                //     }
-                // },
-                // checkTag: function(miniId) {
-                //     this.tag_options.map(name => {
-                //         if (name.name = this.new_tag) {
-                //             this.exists = true
-                //         } 
-                //     })
-                // },
                 tagSelect(event){
                     this.page = 1
                     this.filterMinis()
