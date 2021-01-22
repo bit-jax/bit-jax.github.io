@@ -15,15 +15,16 @@
             <div class='row'>
                 <li v-for='mini in minis.results' class ='col-md-6'>
                     <p>[[ mini.name ]]</p>
-                    <img v-if='mini.displayDetail != true' class='img-thumbnail' :src='mini.image_url[0]'>
                     <div v-if='mini.displayDetail != true'>
-                        <button @click='mini.displayDetail = true'>show</button>
+                        <button @click='mini.displayDetail = true'>Show</button>
                     </div>
+                    <br>
+                    <img v-if='mini.displayDetail != true' class='img-thumbnail' :src='mini.image_url[0]'>
                     <div v-if='mini.displayDetail'>
-                        <p>[[ mini.name ]]</p>
+                        <button @click='mini.displayDetail = false'>Hide</button>
                         <img class='col-md-1, img-thumbnail' v-for='img in mini.image_url' :src='img'>
                         <a :href='mini.url'>[[ mini.name ]]'s page</a>
-                        <button @click='mini.displayDetail = false'>hide</button>
+
                         <div class='container'>
                             <div class ='row'>
                                 <div id='taglist'  v-for='tag in mini.tag_names'>[[ tag ]]</div>
@@ -73,6 +74,7 @@
                 exists: null,
                 tag_exists: null,
                 relation_exists: null,
+                index_check: '',
             },
             delimiters: [
                 '[[',']]'
@@ -97,28 +99,15 @@
                         }
                     })
                 },
-                // pushTag: function(mini){
-                //     this.checkTag()
-                //     if (!this.exists) {
-                //         this.createTag(mini)
-                //     }
-                // },
-                // checkTag: function() {
-                //     this.exists = false
-                //     this.tag_options.map(name => {
-                //         if (name.tag === this.new_tag) {
-                //             this.exists = true
-                //         } 
-                //     })
-                // },
                 pushTag: function(mini){
                     this.checkTag(mini)
                     if (!this.tag_exists) {
                         this.createTag(mini)
                     }
-                    else if (!this.relation_exists) {
-                        this.addTag(mini)
-                    }
+                    // else if (!this.relation_exists) {
+                        
+                    //     this.addTag(mini)
+                    // }
                 },
                 checkTag: function(mini) {
                     this.tag_exists = false
@@ -130,6 +119,7 @@
                     mini.tag_names.map(tag => {
                         if (tag.tag_names === this.new_tag) {
                             this.relation_exists = true
+                            this.index_check = tag.find_index(index => (index === tag))
                         }
                     })
                     })
@@ -291,3 +281,27 @@
         })
     </script>
 {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+                {% comment %} // pushTag: function(mini){
+                //     this.checkTag()
+                //     if (!this.exists) {
+                //         this.createTag(mini)
+                //     }
+                // },
+                // checkTag: function() {
+                //     this.exists = false
+                //     this.tag_options.map(name => {
+                //         if (name.tag === this.new_tag) {
+                //             this.exists = true
+                //         } 
+                //     })
+                // }, {% endcomment %}
