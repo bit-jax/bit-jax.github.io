@@ -8,12 +8,38 @@
  my stuff
  //////////////////*/
 
+.aboutme {
+  max-width: 80%;
+}
+
+h1 {
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .links {
   text-align: right;
   max-width: 20%;
+  justify-content: left;
+  margin-right: 20px;
 }
-header {
-  
+
+.link {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin: 10px;
+  padding: 10px; */
+}
+.links {
+  display: flex;
+  align-items: flex-end;
 }
 
  /* ///////////////////////*/
@@ -2831,7 +2857,7 @@ header {
   .parallax-container {
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 400px;
   }
   
   .parallax-container .parallax {
