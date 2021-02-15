@@ -9,19 +9,19 @@
             <option v-for='word in tag_options' v-bind:value='word.id'>[[ word.tag ]]</option>
         </select>
         <input type='text' @keyup.enter='searchMinis' name='tag' v-model='search'>
-        <button @click='searchMinis'>Search</button>
-        <button @click='showAll' name='all'>Browse All</button>
+        <button style='border-color: black' class="btn btn-default" @click='searchMinis'>Search</button>
+        <button style='border-color: black' class="btn btn-default" @click='showAll' name='all'>Browse All</button>
         <ul class='container'>
             <div class='row'>
                 <li v-for='mini in minis.results' class ='col-md-6'>
                     <p>[[ mini.name ]]</p>
                     <div v-if='mini.displayDetail != true'>
-                        <button @click='mini.displayDetail = true'>Show</button>
+                        <button style='border-color: black' class="btn btn-default" @click='mini.displayDetail = true'>Show</button>
                     </div>
                     <br>
                     <img v-if='mini.displayDetail != true' class='img-thumbnail' :src='mini.image_url[0]'>
                     <div v-if='mini.displayDetail'>
-                        <button @click='mini.displayDetail = false'>Hide</button>
+                        <button style='border-color: black' class="btn btn-default" @click='mini.displayDetail = false'>Hide</button>
                         <img class='col-md-1, img-thumbnail' v-for='img in mini.image_url' :src='img'>
                         <a :href='mini.url'>[[ mini.name ]]'s page</a>
 
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <input type='text' v-model='new_tag' @keyup.enter='pushTag(mini)'>
-                        <button @click='pushTag(mini)'>Add Tag</button>
+                        <button style='border-color: black' class="btn btn-default" @click='pushTag(mini)'>Add Tag</button>
                     </div> 
                 </li>
             </div>

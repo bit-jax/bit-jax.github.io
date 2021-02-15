@@ -32,3 +32,9 @@ header {
     /* display:inline-block; */
     width: fit-content;
 }
+
+.mybtn {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+}
