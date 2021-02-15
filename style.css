@@ -9,6 +9,7 @@
  //////////////////*/
 
 .aboutme {
+  font-size: medium;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -43,6 +44,7 @@
   margin-right: 5px;
   margin-left: 5px;
   padding: 0px;
+  font-size: medium;
 }
 
 .top {
@@ -56,11 +58,11 @@ a:hover {
 }
 
 a:link{
-  color: #261C1C
+  color: #261C1C;
 }
 
 a:visited {
-  color: #F2EA7E
+  color:#F2B705;
 }
 
 a:active {
@@ -9149,4 +9151,3 @@ a:active {
       margin-top: 1.2rem;
     }
   }
-  
